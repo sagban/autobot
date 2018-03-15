@@ -9,7 +9,7 @@ An Automate webportal which generates the notices and sends to respective client
 SETUP
 -----
 
-* First of install python3 in you pc. You'll get the basic steps to install it on internet easily according to you configuration. (But, it's recommended to LINUX/UNIX configurations.)
+* First of all (if it's not) install python3 in your pc. You'll get the basic steps to install it on internet easily according to your configuration. (But, it's recommended to LINUX/UNIX configurations.)
 * This is recommended to install pycharm ide to contribute in this project (https://www.jetbrains.com/pycharm/)
 
 * Next, Installing Virtualenv with pip
