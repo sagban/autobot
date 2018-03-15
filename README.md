@@ -9,7 +9,7 @@ An Automate webportal which generates the notices and sends to respective client
 SETUP
 -----
 
-* First of all (if it's not) install python3 in your pc. You'll get the basic steps to install it on internet easily according to your configuration. (But, it's recommended to LINUX/UNIX configurations.)
+* First of all (if it's not) install python3 in your pc. You'll get the basic steps to install it on internet easily according to your configuration. (It's recommended to use LINUX/UNIX configurations, but you can find similar steps for windows also.)
 * This is recommended to install pycharm ide to contribute in this project (https://www.jetbrains.com/pycharm/)
 
 * Next, Installing Virtualenv with pip
@@ -43,7 +43,7 @@ $ virtualenv python3 venv3
 $ source venv3/bin/activate
 ```
 
- Now, we are all set to clone out project from git and open it on pycharm.
+ Now, we are all set to clone out project from github and open it on pycharm.
  
 * Cloning the project
  Type this command in terminal to clone the repo.
@@ -57,7 +57,7 @@ venv autobot
 ``` 
 
 
-   *Note: The directory sih is only to seperate the things from your stuff, so it won't effect out project because all the project stuff is in the repo we just cloned. So, don't try to rename it. *
+   *Note: The directory sih is only to seperate the things from your stuff, so it won't effect out project because all the project stuff is in the repo we just cloned. So, don't try to rename it.*
   
   Since, we've just cloned our project it's time to open it in super powerfull IDE pycharm
  * Now, open the project in pycharm.(directory sih)
@@ -69,7 +69,8 @@ venv autobot
     ```sh
     (venv) SagBans-Mac:sih sagban$ 
     ```
-    If it's not, then try to activate the virual environment from here by using the previous command ```$ source venv3/bin/activate```
+    If it's not, then try to activate the virual environment from here by using the previous command 
+    ```$ source venv3/bin/activate```
     
     If everything worked fine >>
     Congratulations, you setup the SIH project in your pc.
@@ -94,13 +95,14 @@ Open your favorite Terminal and run these commands from the directory autobot to
 ```sh
 python manage.py runserver
 ```
-Don't forgot to activate virtual environment in every new terminal.
+Wow, application is running
+*Don't forgot to activate virtual environment in every new terminal.*
 
 
 ### Guidelines for Managing code
 
-* Everyone write and push code in their respective git branches.
-* And then after create pull request of *branch* -> *master* from the github
+* Everyone write and push code in your respective git branches.
+* And then after you can create pull request of *branch* -> *master* from the github
 *Watch tutorials on git, github and version control to learn How to work with branches*
 
 MAINTAINERS
