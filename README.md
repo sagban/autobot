@@ -36,7 +36,7 @@ $ cd sih
 ```
  The next step is to create the environment with virtualenv:
 ```sh
-$ virtualenv python3 venv3
+$ virtualenv python3 venv3  #see alternative if you are using other than UNIX.
 ```
  After creating virtual environment, it's time to activate it. Type this command
 ```sh
@@ -67,7 +67,7 @@ venv autobot
     
     Now, open the terminal in pycharm itself and it must be looklike this
     ```sh
-    (venv) SagBans-Mac:sih sagban$ 
+    (venv3) SagBans-Mac:sih sagban$ 
     ```
     If it's not, then try to activate the virual environment from here by using the previous command 
     ```$ source venv3/bin/activate```
@@ -126,18 +126,20 @@ Wow, application is running
 
 * Everyone write and push code in your respective git branches.
 * And then after you can create pull request of *branch* -> *master* from the github
+* No one will push directly in master branch.
 *Watch tutorials on git, github and version control to learn How to work with branches*
+* Make sure scripts, templates, models, url related to the particular app you creates should in their respective folder. 
 
-MAINTAINERS
------------
-
+MAINTAINED BY
+-------------
+P#P - Passionate Programmers
  * SAGAR BANSAL
  * PRIYANK NAGARNAIK
  * VIPUL WAIRAGADE
  * ANUSHREE DESHPANDE
  * AYUSH SINGH
  * SNIGDHA PATIL
-
+Happy coding!
 
 # SIH 2018
 Smart India Hackathon 2018 is a non-stop digital product development competition, where problems are posed to technology students for innovative solutions
