@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'botapp.apps.AdminappConfig',
-    'botapp.apps.UserappConfig',
+    'adminapp.apps.AdminappConfig',
+    'userapp.apps.UserappConfig',
     'botapp.apps.BotappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
