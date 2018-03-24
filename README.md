@@ -90,13 +90,36 @@ $ pip install -r requirements.txt
 ### Development
 
 Installed? Great!
+So, this should be your project structure
+```sh
+sih/
+  autobot
+  adminapp
+  autobot
+  botapp
+  userapp
+  migrations
+  __init__.py
+  admin.py
+  apps.py
+  models.py
+  tests.py
+  views.py
+  .gitignore
+  db.sqlite3
+  manage.py
+  README.md
+  requirements.txt
+venv3/
+```
+
 Open your favorite Terminal and run these commands from the directory autobot to run the server.
 
 ```sh
 python manage.py runserver
 ```
 Wow, application is running
-*Don't forgot to activate virtual environment in every new terminal.*
+*Don't forgot to activate virtual environment in every new terminal ( WE USE MANY OF ;) ).*
 
 
 ### Guidelines for Managing code
@@ -111,7 +134,7 @@ MAINTAINERS
  * SAGAR BANSAL
  * PRIYANK NAGARNAIK
  * VIPUL WAIRAGADE
- * ANUSHREE
+ * ANUSHREE DESHPANDE
  * AYUSH SINGH
  * SNIGDHA PATIL
 
