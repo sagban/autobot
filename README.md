@@ -93,24 +93,24 @@ Installed? Great!
 So, this should be your project structure
 ```sh
 sih/
-  autobot
-  adminapp
-  autobot
-  botapp
-  userapp
-  migrations
-  __init__.py
-  admin.py
-  apps.py
-  models.py
-  tests.py
-  views.py
-  .gitignore
-  db.sqlite3
-  manage.py
-  README.md
-  requirements.txt
-venv3/
+  autobot/
+    adminapp/
+    autobot/
+    botapp/
+    userapp/
+    migrations
+    __init__.py
+    admin.py
+    apps.py
+    models.py
+    tests.py
+    views.py
+    .gitignore
+    db.sqlite3
+    manage.py
+    README.md
+    requirements.txt
+  venv3/
 ```
 
 Open your favorite Terminal and run these commands from the directory autobot to run the server.
@@ -139,7 +139,6 @@ P#P - Passionate Programmers
  * ANUSHREE DESHPANDE
  * AYUSH SINGH
  * SNIGDHA PATIL
-Happy coding!
 
 # SIH 2018
 Smart India Hackathon 2018 is a non-stop digital product development competition, where problems are posed to technology students for innovative solutions
