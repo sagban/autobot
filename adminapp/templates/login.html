@@ -2,8 +2,10 @@
 <html>
   <head>
     <title>User Login | RTO</title>
+
+    {% load staticfiles %}
     {%include "header.html"%}
-    <link rel="stylesheet" href="css/login.css" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/login.css'%}" type="text/css" />
   </head>
 
 
@@ -13,14 +15,14 @@
   <div class="section"></div>
   <main>
     <center>
-      <h5 class="indigo-text">Admin</h5>
+      <h5 class="blue-grey-text text-darken-4">Admin</h5>
       <div class="section"></div>
 
-      <h5 class="indigo-text">Please, login into your account</h5>
+      <h5 class="blue-grey-text text-darken-4">Please, login into your account</h5>
       <div class="section"></div>
 
       <div class="container">
-        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+        <div class="z-depth-1 blue-grey lighten-5 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 
           <form class="col s12" method="post">
             <div class='row'>
@@ -30,8 +32,8 @@
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' />
-                <label for='email'>Enter your email</label>
+                <input class='validate' type='text' name='admin-id' id='admin-id' />
+                <label for='admin-id'>Enter your ID</label>
               </div>
             </div>
 
@@ -41,14 +43,14 @@
                 <label for='password'>Enter your password</label>
               </div>
               <label style='float: right;'>
-								<a class='pink-text' href='#!'><b>Forgot Password?</b></a>
+								<a class='blue-grey-text' href='#!'><b>Forgot Password?</b></a>
 							</label>
             </div>
 
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect blue-grey darken-4'>Login</button>
               </div>
             </center>
           </form>
