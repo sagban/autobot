@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin Login | RTO</title>
-    <?php include("header.php")?>
+    <title>User Login | RTO</title>
+    {%include "header.html"%}
     <link rel="stylesheet" href="css/login.css" type="text/css" />
   </head>
 <body>
+{%include "navbar.html"%}
+{%include "sidebar.html"%}
 
-<?php include("navbar.php")?>
-<?php include("sidebar.php")?>
 <div class="container" id="containerLogin">
   <div class="container-inner" style="text-align: center;" id="loginDiv">
-    <h2>RTO Admin Login Portal</h2>
+    <h2>RTO User Login Portal</h2>
     <h3>Login Here:</h3>
 
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
     <div id="id01" class="modal">
 
-      <form class="modal-content animate" action="/adminboard.php">
+      <form class="modal-content animate" action="/dashboard.php">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
           <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar">
@@ -27,9 +27,6 @@
         <div class="container" id="loginForm">
           <label><b>Aadhaar Number</b></label>
           <input type="text" placeholder="Enter Aadhaar Number" name="uid" required>
-
-          <label><b>Admin License Number</b></label>
-          <input type="text" placeholder="Enter License Number" name="uname" required>
 
           <label><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
