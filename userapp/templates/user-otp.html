@@ -15,7 +15,7 @@
   <div class="section"></div>
   <main>
     <center>
-      <h5 class="blue-grey-text text-darken-4">Admin</h5>
+      <h5 class="blue-grey-text text-darken-4">User Login</h5>
       <div class="section"></div>
 
       <h5 class="blue-grey-text text-darken-4">{{message}}</h5>
@@ -30,27 +30,21 @@
               </div>
             </div>
             {% csrf_token %}
-            <div class='row'>
-              <div class='input-field col s12'>
-                <input class='validate' type='text' name='admin-id' id='admin-id' />
-                <label for='admin-id'>Enter your ID</label>
-              </div>
-            </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Enter your password</label>
+                <input class='validate' type='password' name='user-otp' id='user-otp' />
+                <label for='user-otp'>Enter your OTP</label>
               </div>
               <label style='float: right;'>
-								<a class='blue-grey-text' href='#!'><b>Forgot Password?</b></a>
+								<a class='blue-grey-text' href='#!'><b>Resend OTP</b></a>
 							</label>
             </div>
 
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect blue-grey darken-4'>Login</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect blue-grey darken-4'>Submit OTP</button>
               </div>
             </center>
           </form>

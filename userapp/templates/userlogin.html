@@ -15,7 +15,7 @@
   <div class="section"></div>
   <main>
     <center>
-      <h5 class="blue-grey-text text-darken-4">Admin</h5>
+      <h5 class="blue-grey-text text-darken-4">User Login</h5>
       <div class="section"></div>
 
       <h5 class="blue-grey-text text-darken-4">{{message}}</h5>
@@ -33,14 +33,21 @@
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='text' name='admin-id' id='admin-id' />
-                <label for='admin-id'>Enter your ID</label>
+                <label for='admin-id'>Enter your Aadhaar ID</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='text' name='admin-mobile' id='admin-mobile' />
+                <label for='admin-mobile'>Enter your Register Mobile No.</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Enter your password</label>
+                <label for='password'>Enter your pass</label>
               </div>
               <label style='float: right;'>
 								<a class='blue-grey-text' href='#!'><b>Forgot Password?</b></a>
@@ -50,7 +57,7 @@
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect blue-grey darken-4'>Login</button>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect blue-grey darken-4'>Request OTP</button>
               </div>
             </center>
           </form>

@@ -22,5 +22,8 @@ from userapp import views as user_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', bot_views.index),
-    path('login/', admin_views.login),
+    path('admin-login/', admin_views.adminLogin),
+    path('admin-validate/', admin_views.adminLoginValidate),
+    path('user-login/', user_views.userLogin),
+    path('user-validate/', user_views.userLoginValidate),
 ]
