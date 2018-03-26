@@ -2,12 +2,13 @@
 <html>
   <head>
     <title>Home | RTO</title>
-    <?php include("header.php")?>
+      {% load staticfiles %}
+      {%include 'header.html'%}
+      <link rel="stylesheet" href="{% static 'css/style.css'%}">
   </head>
 <body>
 
-<?php include("navbar.php")?>
-<?php include("sidebar.php")?>
+{%include 'navbar.html'%}
 <div class="container" id="containerHome">
   <div class="container-inner">
     <td class="vahan" style="text-align: left; font-size: 0.8em;"><br>
@@ -87,9 +88,7 @@
       </ul>
     </div>
   </div>
-  <?php include("footer.php")?>
+  {%include 'footer.html'%}
 </div>
-<?php include("script.php")?>
-
 </body>
 </html>

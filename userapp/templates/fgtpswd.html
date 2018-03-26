@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>User Login | RTO</title>
+    <title>Forgot Password | RTO</title>
     <?php include("header.php")?>
     <link rel="stylesheet" href="css/login.css" type="text/css" />
   </head>
@@ -9,35 +9,28 @@
 
 <?php include("navbar.php")?>
 <?php include("sidebar.php")?>
-<div class="container" id="containerLogin">
+<div class="container">
   <div class="container-inner" style="text-align: center;" id="loginDiv">
-    <h2>RTO User Login Portal</h2>
-    <h3>Login Here:</h3>
+    <h2>Forgot Password</h2>
+    <h3>An email will be sent with instructions to reset your password.</h3>
 
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Forgot Password</button>
 
     <div id="id01" class="modal">
 
-      <form class="modal-content animate" action="/dashboard.php">
+      <form class="modal-content animate" action="/action_page.php">
         <div class="imgcontainer">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container" id="loginForm">
-          <label><b>Aadhaar Number</b></label>
-          <input type="text" placeholder="Enter Aadhaar Number" name="uid" required>
-
-          <label><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-
-          <button type="submit">Login</button>
-          <input type="checkbox" checked="checked"> Remember me
+          <label><b>Enter your email address:</b></label>
+          <input type="text" placeholder="your.email@website.com" name="email" required>
         </div>
 
         <div class="container" style="background-color:#f1f1f1" id="loginForm">
           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <span class="psw"><a href="fgtpswd.php">Forgot password?</a></span>
+          <span class="psw">Remember your login credentials? &nbsp;<a href="login.php">Login here</a></span>
         </div>
       </form>
     </div>
