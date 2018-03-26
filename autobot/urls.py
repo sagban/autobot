@@ -27,4 +27,5 @@ urlpatterns = [
     path('user-login/', user_views.userLogin),
     path('user-validate/', user_views.userLoginValidate),
     path('forgot-password/', user_views.userForgotPass),
+    path('register-user/', user_views.userNewRegister),
 ]

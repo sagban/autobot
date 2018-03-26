@@ -19,7 +19,7 @@ def userLoginValidate(request):
     if request.method == "POST":
 
         if request.POST["user-id"] == '' or request.POST["password"] == '':
-            args = {"message": "ID and Password can not be vaccant"}
+            args = {"message": "Login Credentials can't be left blank!"}
             return render(request, 'userlogin.html', args)
 
         else:
@@ -30,5 +30,8 @@ def userLoginValidate(request):
                 args = {"message": "Enter the valid ID and Password"}
                 return render(request, 'userlogin.html', args)
 
-    args = {"message": "Please, Login Correctly"}
+    args = {"message": "Enter valid credentials!"}
     return render(request, 'userlogin.html', args)
+
+def userNewRegister (request):
+    return render(request, "newuserreg.html")
