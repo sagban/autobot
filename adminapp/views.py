@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from adminapp.models import *
 
 # Create your views here.
 def adminLogin(request):
@@ -20,7 +20,14 @@ def adminLoginValidate(request):
             return render(request, 'login.html', args)
 
         else:
-            if request.POST["password"] == '12345' and request.POST["admin-id"] == 'id':
+
+            try:
+                admin = Admin.objects.get(adminUid=request.POST["admin-id"])
+            except Admin.DoesNotExist:
+                args = {"message": "Invalid ID"}
+                return render(request, 'login.html', args)
+
+            if request.POST["password"] == admin.adminPass:
                 request.session["admin-login"] = True
                 return render(request, 'admin.html', {})
             else:
