@@ -26,4 +26,5 @@ urlpatterns = [
     path('admin-validate/', admin_views.adminLoginValidate),
     path('user-login/', user_views.userLogin),
     path('user-validate/', user_views.userLoginValidate),
+    path('forgot-password/', user_views.userForgotPass),
 ]

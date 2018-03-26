@@ -3,7 +3,10 @@ from django.shortcuts import render
 # Create your views here.
 # Create your views here.
 def userLogin(request):
-    return render(request,"userlogin.html",{"message":"Please, Login In Here",})
+    return render(request,"userlogin.html",{"message":"Login Here",})
+
+def userForgotPass (request):
+    return render (request, "fgtpswd.html")
 
 def userLoginValidate(request):
     if request.session.get("user-login", False):

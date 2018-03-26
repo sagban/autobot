@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin Login | Autobot</title>
+    <title>User Login | AutoNoticeBot</title>
 
     {% load staticfiles %}
     {%include "header.html"%}
@@ -16,7 +16,7 @@
   <main>
     <center>
       <h5 class="blue-grey-text text-darken-4">User Login</h5>
-      <div class="section"></div>
+      <!--<div class="section"></div>-->
 
       <h5 class="blue-grey-text text-darken-4">{{message}}</h5>
       <div class="section"></div>
@@ -40,7 +40,7 @@
             <div class='row'>
               <div class='input-field col s12'>
                 <input class='validate' type='text' name='admin-mobile' id='admin-mobile' />
-                <label for='admin-mobile'>Enter your Register Mobile No.</label>
+                <label for='admin-mobile'>Enter your registered Mobile No./Email ID</label>
               </div>
             </div>
 
@@ -50,7 +50,7 @@
                 <label for='password'>Enter your pass</label>
               </div>
               <label style='float: right;'>
-								<a class='blue-grey-text' href='#!'><b>Forgot Password?</b></a>
+								<a class='blue-grey-text' href='../forgot-password'><b>Forgot Password?</b></a>
 							</label>
             </div>
 
