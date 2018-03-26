@@ -24,7 +24,7 @@
       <div class="container">
         <div class="z-depth-1 blue-grey lighten-5 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 
-          <form class="col s12" method="post" action="/admin-validate/">
+          <form class="col s12" method="post" action="/user-validate/">
             <div class='row'>
               <div class='col s12'>
               </div>
@@ -32,29 +32,29 @@
             {% csrf_token %}
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='admin-id' id='admin-id' />
-                <label for='admin-id'>Enter your Aadhaar ID</label>
+                <input class='validate' type='text' name='user-id' id='user-id' />
+                <label for='user-id'>Enter your Aadhaar ID</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='admin-mobile' id='admin-mobile' />
-                <label for='admin-mobile'>Enter your registered Mobile No./Email ID</label>
+                <input class='validate' type='text' name='user-cred' id='user-cred' />
+                <label for='user-cred'>Enter your registered Mobile No./Email ID</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Enter your Password</label>
+                <input class='validate' type='password' name='user-pass' id='user-pass' />
+                <label for='user-pass'>Enter your Password</label>
               </div>
-              <label style='float: right;'>
+              <!--<label style='float: right;'>
 								<a class='blue-grey-text' href='../forgot-password'><b>Forgot Password?</b></a>
               </label>
               <label style='float: left;'>
 								<a class='blue-grey-text' href='../register-user'><b>New User? Register Here!</b></a>
-              </label>
+              </label>-->
             </div>
 
             <br />

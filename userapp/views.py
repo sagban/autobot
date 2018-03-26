@@ -18,16 +18,16 @@ def userLoginValidate(request):
 
     if request.method == "POST":
 
-        if request.POST["user-id"] == '' or request.POST["password"] == '':
+        if request.POST["user-id"] == '' or request.POST["user-pass"] == '' or request.POST["user-cred"] == '':
             args = {"message": "Login Credentials can't be left blank!"}
             return render(request, 'userlogin.html', args)
 
         else:
-            if request.POST["password"] == '12345' and request.POST["admin-id"] == 'id':
+            if request.POST["user-pass"] == 'mypass@1234' and request.POST["user-id"] == '987654321000' and request.POST["user-cred"] == 'myemail@website.com':
                 request.session["user-login"] = True
-                return render(request, 'userlogin.html', {})
+                return render(request, 'user.html', {})
             else:
-                args = {"message": "Enter the valid ID and Password"}
+                args = {"message": "Enter valid login credentials"}
                 return render(request, 'userlogin.html', args)
 
     args = {"message": "Enter valid credentials!"}
