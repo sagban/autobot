@@ -18,7 +18,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'autobot.settings'
 import django
 django.setup()
 
-print("Before Importing models")
+print("Importing models")
 
 from adminapp.models import *
 
@@ -28,6 +28,8 @@ print("Importing Done")
 DIRECTORY_CSVFILES = "/CSV"
 FILE_CSV_ADMIN = BASE_DIR + DIRECTORY_CSVFILES + "/Admin.csv"
 
+
+'''Loads CSV file and stores admin data into the database'''
 def loadAdminData():
     dataReader = csv.reader ( open ( FILE_CSV_ADMIN ) , delimiter=',' , quotechar='"' )
 
