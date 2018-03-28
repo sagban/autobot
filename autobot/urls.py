@@ -24,8 +24,14 @@ urlpatterns = [
     path('', bot_views.index),
     path('admin-login/', admin_views.adminLogin),
     path('admin-validate/', admin_views.adminLoginValidate),
+    path('adminIn/', admin_views.adminIn),
+    path('addcrime/', admin_views.addCrime),
     path('user-login/', user_views.userLogin),
     path('user-validate/', user_views.userLoginValidate),
+<<<<<<< HEAD
     path('forgot-password/', user_views.userForgotPass),
     path('register-user/', user_views.userNewRegister),
+=======
+
+>>>>>>> master
 ]

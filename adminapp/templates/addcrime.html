@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Login | RTO</title>
+    {% load staticfiles %}
+    {%include 'header.html'%}
+    <link rel="stylesheet" href="{% static 'css/login.css'%}" type="text/css" />
+  </head>
+<body>
+
+{%include 'navbar.html'%}
+<div class="container" id="containerLogin">
+  <div class="" style="text-align: center;" id="loginDiv">
+      <div class="row" id="crimeDiv">
+        <div class="col m3 s12">
+            <div class="card">
+                <div class="card-content"><h5 class="blue-grey-text text-darken-4">WelCome<br><span class="adminName blue-grey-text">{{admin.adminName}}</span><br><span class="adminUid amber-text text-lighten-2">@{{admin.adminUid}}</span></h5></div>
+            </div>
+        </div>
+        <div class="col m9 s12">
+          <div class="card">
+            <div class="card-content blue-grey lighten-4">
+              <span class="card-title">Add Crime Details Here</span>
+            </div>
+
+              <div class="card-content">
+                  <div class="row">
+                    <!--div class="input-field col s12 m6">
+                      <label for="timepicker">Time</label>
+                      <input  type="time" id="timepicker" class="timepicker">
+                    </div-->
+
+                    <div class="input-field col s12 m4">
+                      <label for="datepicker">Date</label>
+                        <input type = "date" class = "datepicker" id="datepicker" />
+                    </div>
+
+                  </div>
+                  <a class="btn-floating halfway-fab waves-effect waves-light amber lighten-2" id="add-todo-item"><i class="material-icons">add</i></a>
+              </div>
+
+          </div>
+
+            <ul id="todo-list">
+                <li class="card" id="todo-list-item">
+                    <div class="card-content todo-form">
+
+                        <div class="row">
+                            <form class="col s12 m12">
+                              <div class="row">
+                                <div class="input-field col s12 m12">
+                                    <select class="icons">
+                                      <option class="text-blue-grey" value="" disabled selected>Choose your option</option>
+                                      <option class="blue-grey" value="" >example 1</option>
+                                      <option class="blue-grey" value="" >example 2</option>
+                                      <option class="blue-grey" value="" >example 3</option>
+                                    </select>
+                                    <label>Select The Crime</label>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="input-field col s12">
+                                  <input id="textarea1" type="text"class="validate"></input>
+                                  <label for="textarea1">Comments</label>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </li>
+
+            </ul>
+
+
+        </div>
+      </div>
+
+
+
+
+  </div>
+</div>
+{% include 'footer.html' %}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script>
+
+</script>
+  <!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="{% static 'js/script.js'%}"></script>
+
+</body>
+</html>
