@@ -5,9 +5,6 @@ from django.shortcuts import render
 def userLogin(request):
     return render(request,"userlogin.html",{"message":"Login Here",})
 
-def userForgotPass (request):
-    return render (request, "fgtpswd.html")
-
 def userLoginValidate(request):
     if request.session.get("user-login", False):
 
@@ -32,6 +29,10 @@ def userLoginValidate(request):
 
     args = {"message": "Enter valid credentials!"}
     return render(request, 'userlogin.html', args)
+
+
+def userForgotPass (request):
+    return render (request, "fgtpswd.html")
 
 def userNewRegister (request):
     return render(request, "newuserreg.html")
