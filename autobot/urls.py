@@ -28,10 +28,10 @@ urlpatterns = [
     path('addcrime/', admin_views.addCrime),
     path('user-login/', user_views.userLogin),
     path('user-validate/', user_views.userLoginValidate),
-<<<<<<< HEAD
+
     path('forgot-password/', user_views.userForgotPass),
     path('register-user/', user_views.userNewRegister),
-=======
 
->>>>>>> master
+
+
 ]
