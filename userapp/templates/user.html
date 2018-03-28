@@ -4,7 +4,11 @@
         <title>User Dashboard | Login</title>
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="../static/css/userboard.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
 
@@ -25,16 +29,45 @@
         </div>
       </nav>
 
-      <ul class="sidenav" id="mobile-demo">
+      <!--<ul class="sidenav" id="mobile-demo">
         <li><a href="#">Link 1</a></li>
         <li><a href="#">Link 2</a></li>
         <li><a href="#">Link 3</a></li>
         <li><a href="#">Link 4</a></li>
-      </ul>
+      </ul>-->
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="">
+      </div>
+      <a href="#"><img class="circle" src=""></a>
+      <a href="#"><span class="white-text name">John Doe</span></a>
+      <a href="#"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#">Third Link With Waves</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+
+
     <script src="../static/js/userboard.js"></script>
+    <script>
+         var elem = document.querySelector('.sidenav');
+        var instance = M.Sidenav.init(elem, options);
+
+  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+  // var collapsibleElem = document.querySelector('.collapsible');
+  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+
+
+    </script>
 
     </body>
 </html>
