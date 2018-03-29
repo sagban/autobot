@@ -25,17 +25,27 @@
             <div class="card card-image">
              <h5>Search by Image</h5>
              <div class="card-content">
-                   <form action="#">
-                        <div class="file-field input-field">
-                          <div class="btn waves-effect blue-grey">
-                            <i class="material-icons">image</i>
-                            <input type="file">
-                          </div>
-                          <div class="file-path-wrapper">
+                 <div class="file-field input-field">
+                    <div class="btn waves-effect blue-grey">
+                        <i class="material-icons">image</i>
+                         <input type="file" id="image-input" data-js-image-input />
+                     </div>
+                     <div class="file-path-wrapper">
                             <input class="file-path validate" type="text">
-                          </div>
-                        </div>
-                   </form>
+                     </div>
+{#                  <input type="file" id="image-input" data-js-image-input/>#}
+{#                    <div class="file-path-wrapper">#}
+{#                            <input class="file-path validate" type="text">#}
+{#                    </div>#}
+                    </div>
+                 <div class="image-result-container">
+                  <div class="image-container" data-js-image-container><img/></div>
+                  <div class="result-container result-default" data-js-result-container>&nbsp;</div>
+              </div>
+                 <br />
+                 <div class="button-container">
+                     <button class="btn btn-default" type="button" data-js-go-button>Extract Number Plate In Text</button>
+                 </div>
              </div>
 
             </div>
@@ -54,10 +64,7 @@
                       </div>
                     </form>
              </div>
-
          </div>
-
-
         </div>
       </div>
 
@@ -68,13 +75,14 @@
 </div>
 {% include 'footer.html' %}
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
+<script type="text/javascript" src="{% static 'js/ocr_form.js' %}"></script>
 <script>
 
 </script>
   <!-- Compiled and minified JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script type="text/javascript" src="{% static 'js/script.js'%}"></script>
+<link rel="stylesheet" href="{% static 'css/ocr_form.css' %}" />
 
 </body>
 </html>
