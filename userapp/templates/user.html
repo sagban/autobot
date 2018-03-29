@@ -3,63 +3,20 @@
     <head>
         <title>User Dashboard | Login</title>
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+          <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="../static/css/userboard.css">
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
     </head>
     <body>
+{% include 'navbar.html'%}
 
-    <!--<div class="progress">
-        <div class="indeterminate"></div>
-    </div>-->
-
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">User Dashboard</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
-        </div>
-      </nav>
-
-      <!--<ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
-        <li><a href="#">Link 4</a></li>
-      </ul>-->
-
-    <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-      <div class="background">
-        <img src="">
-      </div>
-      <a href="#"><img class="circle" src=""></a>
-      <a href="#"><span class="white-text name">John Doe</span></a>
-      <a href="#"><span class="white-text email">jdandturk@gmail.com</span></a>
-    </div></li>
-    <li><a href="#"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#">Third Link With Waves</a></li>
-  </ul>
-  <a href="#" data-activates="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
          <div class="row">
              <div class="col m4 s6">
                  <div class="card">
-        <div class="card-image">
-          <img src="">
-          <span class="card-title">User Name</span>
-        </div>
+
         <div class="card-content">
           <p>User Profile Info</p>
         </div>
@@ -73,59 +30,70 @@
         </div>
       </div>
              </div>
-             <div class="col m8 s6" style="float: right">
+              <div class="col m8 s6">
+                 <div class="card">
+
+        <div class="card-content">
+          <p>Notices</p>
+        </div>
+        <div class="card-action">
+          Notice will be displayed here!
+        </div>
+      </div>
+             </div>
+
+
+</div>
+
+    <div class="row">
+
+
+             <div class="col m4 s6" style="float: left">
                  <div class="card">
     <div class="card-content">
       <p>My Vehicles</p>
     </div>
     <div class="card-tabs">
       <ul class="tabs tabs-fixed-width">
-        <li class="tab"><a href="#test4">Vehicle 1</a></li>
-        <li class="tab"><a class="active" href="#test5">Vehicle 2</a></li>
-        <li class="tab"><a href="#test6">Vehicle 3</a></li>
+          <li id="vehicle1"><a href="#veh1"></a></li>
       </ul>
     </div>
     <div class="card-content grey lighten-4">
-      <div id="test4">Vehicle 1</div>
-      <div id="test5">Vehicle 2</div>
-      <div id="test6">Vehicle 3</div>
+      <ul id="veh1">
+          <li>Registration Number</li>
+          <li>Maker Class</li>
+          <li>Maker Model</li>
+          <li>Fuel Type</li>
+          <li>Chassis Number</li>
+          <li>Engine Number</li>
+          <li>Registration Date</li>
+          <li>Registering Authority</li>
+      </ul>
     </div>
   </div>
              </div>
-         </div>
-
-    <div class="row">
-        <div class="col m4 s6">
-
-            <div class="card">
-                <div class="card-title">
-                    Notices - Overview
-                </div>
-                <div class="card-content">
-                    <pre>
-
-
-
-            </pre>
-                </div>
-            </div>
-        </div>
     </div>
 
 
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-    <script src="../static/js/userboard.js"></script>
+
+
+
+
     <script>
-         var elem = document.querySelector('.sidenav');
-        var instance = M.Sidenav.init(elem, options);
 
-  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
-  // var collapsibleElem = document.querySelector('.collapsible');
-  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
-
+        $(function(){
+            $(".button-collapse").sideNav();
+        });
 
 
     </script>
+
 
     </body>
 </html>
