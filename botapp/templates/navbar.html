@@ -1,14 +1,20 @@
 <nav class="blue-grey darken-4" role="navigation" id="menu">
    <!-- Navigation Bar Begin -->
    <div class="nav-wrapper">
-      <a id="logo-container" href="#" class="brand-logo"><i class="fa fa-joomla"></i> Navbar</a>
+      {% load staticfiles %}
+      <div class="brand-logo">
+      <a id="logo-container" href="#">AutoBot</a>
+      </div>
+
       <!-- List Item Begin -->
       <ul class="right hide-on-med-and-down">
          <li><a href="#home" class="hvr-float-shadow">Home</a></li>
          <li><a href="#about" class="hvr-float-shadow">About</a></li>
-         <li><a href="#product" class="hvr-float-shadow">Product</a></li>
+         <li><a href="#product" class="hvr-float-shadow">Search</a></li>
+
+         <li><a href="#fine">Pay Fine</a></li>
          <li><a href="#contact" class="hvr-float-shadow">Contact</a></li>
-         <li><a class="waves-effect amber lighten-2 btn">Sign in</a></li>
+         <li><a class="waves-effect amber lighten-2 btn">Admin</a></li>
       </ul>
       <!-- Navigation Bar End -->
       <!-- Mobile Nav Bar Begin -->
