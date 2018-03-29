@@ -67,3 +67,27 @@ class TOTPVerification:
         # token can be obtained with `totp.token()`
         token = str(totp.token()).zfill(6)
         return token
+
+    def verify_token(self, token, tolerance=0):
+        try:
+            # convert the input token to integer
+            token = int(token)
+        except ValueError:
+            # return False, if token could not be converted to an integer
+            self.verified = False
+        else:
+            totp = self.totp_obj()
+            # check if the current counter value is higher than the value of
+            # last verified counter and check if entered token is correct by
+            # calling totp.verify_token()
+            if ((totp.t() > self.last_verified_counter) and
+                    (totp.verify(token, tolerance=tolerance))):
+                # if the condition is true, set the last verified counter value
+                # to current counter value, and return True
+                self.last_verified_counter = totp.t()
+                self.verified = True
+            else:
+                # if the token entered was invalid or if the counter value
+                # was less than last verified counter, then return False
+                self.verified = False
+        return self.verified
