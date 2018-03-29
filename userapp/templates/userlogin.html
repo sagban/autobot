@@ -69,8 +69,25 @@
             <br />
             <center>
               <div class='row'>
-                <a class="waves-effect waves-light btn modal-trigger" href="#otp" type="submit">Request OTP</a>
+                <a class="waves-effect waves-light btn modal-trigger" href="#otp">Request OTP</a>
               </div>
+
+<!-- OTP Structure -->
+  <div id="otp" class="modal">
+    <div class="modal-content">
+      <h4>Enter your OTP</h4>
+      <div class="input-field col m8 s12">
+          <i class="material-icons prefix">lock</i>
+          <input id="optr" type="password" class="validate">
+          <label for="otp">OTP</label>
+        </div>
+    </div>
+<div class="modal-footer">
+      <a name='new_otp' href="/user-login">Request New OTP</a>
+      <button type='submit' name='user-pass' id='user-pass' class='col s12 btn waves-effect'>Login</button>
+    </div>
+  </div>
+
             </center>
           </form>
         </div>
@@ -80,23 +97,6 @@
     <div class="section"></div>
     <div class="section"></div>
   </main>
-
-<!-- OTP Structure -->
-<form action="userlogin.html"></form>
-  <div id="otp" class="modal">
-    <div class="modal-content">
-      <h4>Enter your OTP</h4>
-      <div class="input-field col m8 s12">
-          <i class="material-icons prefix">lock</i>
-          <input id="optr" type="tel" class="validate">
-          <label for="otp">OTP</label>
-        </div>
-    </div>
-<div class="modal-footer">
-      <button name='btn_login' class='col s12 btn waves-effect'>Request New OTP</button>
-      <button type='submit' name='btn_login' class='col s12 btn waves-effect'>Login</button>
-    </div>
-  </div>
 
     <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
