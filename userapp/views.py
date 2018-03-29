@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from django_otp.oath import TOTP
+from django_otp.util import random_hex
+from unittest import mock
+import time
 
 # Create your views here.
 # Create your views here.
@@ -29,3 +33,21 @@ def userLoginValidate(request):
 
     args = {"message": "Enter valid credentials!"}
     return render(request, 'userlogin.html', args)
+
+'''OTP Verification'''
+class TOTPVerification:
+
+    def __init__(self):
+        # secret key that will be used to generate a token,
+        # User can provide a custom value to the key.
+        self.key = random_hex(20)
+        # counter with which last token was verified.
+        # Next token must be generated at a higher counter value.
+        self.last_verified_counter = -1
+        # this value will return True, if a token has been successfully
+        # verified.
+        self.verified = False
+        # number of digits in a token. Default is 6
+        self.number_of_digits = 6
+        # validity period of a token. Default is 30 second.
+        self.token_validity_period = 35
