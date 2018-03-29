@@ -51,3 +51,19 @@ class TOTPVerification:
         self.number_of_digits = 6
         # validity period of a token. Default is 30 second.
         self.token_validity_period = 35
+
+    def totp_obj(self):
+        # create a TOTP object
+        totp = TOTP(key=self.key,
+                    step=self.token_validity_period,
+                    digits=self.number_of_digits)
+        # the current time will be used to generate a counter
+        totp.time = time.time()
+        return totp
+
+    def generate_token(self):
+        # get the TOTP object and use that to create token
+        totp = self.totp_obj()
+        # token can be obtained with `totp.token()`
+        token = str(totp.token()).zfill(6)
+        return token
