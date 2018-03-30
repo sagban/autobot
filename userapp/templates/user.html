@@ -1,64 +1,155 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Admin Login | RTO</title>
-    {%include 'header.html'%}
-    <link rel="stylesheet" href="css/login.css" type="text/css" />
-  </head>
+<head>
+    <title>User Dashboard | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
 <body>
+{% include 'navbar.html'%}
 
-{%include 'navbar.html'%}
-<?php include("sidebar.php")?>
-<div class="container" id="containerLogin">
-  <div class="container-inner" style="text-align: center;" id="loginDiv">
-    <h2>RTO Admin Login Portal</h2>
-    <h3>Login Here:</h3>
+<div class="container">
+    <div class="row">
+        <div class="col m4 s12">
+            <div class="card">
 
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                <div class="card-content">
+                    <p>User Profile Info</p>
+                </div>
+                <div class="card-action">
+                    <ul>
+                        <li>Aadhaar Number : </li>
+                        <li>Name : </li>
+                        <li>DOB : </li>
+                        <li>Gender : </li>
+                        <li>Email : </li>
+                        <li>Address : </li>
+                        <li>Driver License Number : </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col m8 s12">
+            <div class="card">
 
-    <div id="id01" class="modal">
+                <div class="card-content">
+                    <p>Notices</p>
+                </div>
+                <div class="card-action">
+                    <ul class="collection">
+                        <li class="collection-item"><div>Notice 1<a class=" secondary-content modal-trigger" href="#modal1""><i class="material-icons">error_outline</i></a></div></li>
+                        <li class="collection-item"><div>Notice 2<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                        <li class="collection-item"><div>Notice 3<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                        <li class="collection-item"><div>Notice 4<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                    </ul>
+                </div>
 
-      <form class="modal-content animate" action="/adminboard.php">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="avatar">
+                </button>
+            </div>
         </div>
 
-        <div class="container" id="loginForm">
-          <label><b>Aadhaar Number</b></label>
-          <input type="text" placeholder="Enter Aadhaar Number" name="uid" required>
-
-          <label><b>Admin License Number</b></label>
-          <input type="text" placeholder="Enter License Number" name="uname" required>
-
-          <label><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-
-          <button type="submit">Login</button>
-          <input type="checkbox" checked="checked"> Remember me
+        <!-- Notice Structure -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>NOTICE CONTENT TO BE DISPLAYED HERE</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Complain <i class="material-icons">error</i></a>
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Proceed to Pay <i class="material-icons">send</i></a>
+            </div>
         </div>
-
-        <div class="container" style="background-color:#f1f1f1" id="loginForm">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <span class="psw"><a href="fgtpswd.php">Forgot password?</a></span>
-        </div>
-      </form>
     </div>
-  </div>
-  <?php include("footer.php")?>
-</div>
-<?php include("script.php")?>
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+
+
+    <div class="row">
+        <div class="col m4 s12">
+            <div class="card">
+                <div class="card-content">
+                    <p>My Vehicles</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a href="#test4">Test 1</a></li>
+                        <li class="tab"><a class="active" href="#test5">Test 2</a></li>
+                        <li class="tab"><a href="#test6">Test 3</a></li>
+                    </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                    <div id="test4">
+                        <ul id="veh1">
+                            <li>Registration Number : </li>
+                            <li>Maker Class : </li>
+                            <li>Maker Model : </li>
+                            <li>Fuel Type : </li>
+                            <li>Chassis Number : </li>
+                            <li>Engine Number : </li>
+                            <li>Registration Date : </li>
+                            <li>Registering Authority : </li>
+                        </ul>
+                    </div>
+                    <div id="test5">
+                        <ul id="veh2">
+                            <li>Registration Number : </li>
+                            <li>Maker Class : </li>
+                            <li>Maker Model : </li>
+                            <li>Fuel Type : </li>
+                            <li>Chassis Number : </li>
+                            <li>Engine Number : </li>
+                            <li>Registration Date : </li>
+                            <li>Registering Authority : </li>
+                        </ul>
+                    </div>
+                    <div id="test6">
+                        <ul id="veh3">
+                            <li>Registration Number : </li>
+                            <li>Maker Class : </li>
+                            <li>Maker Model : </li>
+                            <li>Fuel Type : </li>
+                            <li>Chassis Number : </li>
+                            <li>Engine Number : </li>
+                            <li>Registration Date : </li>
+                            <li>Registering Authority : </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+
+
+
+<script>
+
+    $(function(){
+        $(".button-collapse").sideNav();
+    });
+
+    $(document).ready(function(){
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+
 </script>
+
 
 </body>
 </html>

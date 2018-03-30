@@ -1,7 +1,27 @@
+import pytesseract
+# import cv2
+from PIL import Image, ImageFilter
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
+
 from adminapp.models import *
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
+
 # Create your views here.
+'''The image processing function. Extract number plate in text from image'''
+
+
+@csrf_exempt
+def index(request):
+    if request.method == 'POST':
+        with Image.open(request.FILES['image']).convert("RGB") as image:
+            new_size = tuple(2 * x for x in image.size)
+            image.compression_quality = 99
+            image = image.resize(new_size, Image.ANTIALIAS)
+            sharpened_image = image.filter(ImageFilter.SHARPEN)
+            utf8_text = pytesseract.image_to_string(sharpened_image)
+        return JsonResponse({'utf8_text': utf8_text})
+    return render(request, 'admin.html')
 
 '''Provides the login Page'''
 def adminLogin(request):
@@ -11,7 +31,7 @@ def adminLogin(request):
 
         args = {
                 'message': "You're already Logged in!",
-                'admin':request.session['admin']
+                "admin": request.session['admin']
 
                 }
         return render(request, 'admin.html', args)
@@ -79,6 +99,7 @@ def adminIn(request):
         "value": False,
     }
     return render(request, 'login.html', args)
+
 
 '''Yet to complete, Most probably this function will call after the image processing or vehical number validation for the criminal search.'''
 def addCrime(request):
