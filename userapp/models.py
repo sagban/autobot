@@ -27,18 +27,16 @@ class user(models.Model):
     def __str__(self):
         return self.userId
 
-
 class vehicle(models.Model):
     vehicleId = models.AutoField(primary_key=True)
-    engineNumber = models.TextField(max_length=17)
-    chassisNumber = models.TextField(max_length=17)
-    fuelType = models.TextField(max_length=20)
-    makerModel = models.TextField(max_length=20)
-    makerClass = models.TextField(max_length=20)
-    regAuth = models.TextField(max_length=20)
+    #makerModel = models.TextField(max_length=100)
+    makerClass = models.TextField(max_length=100)
+    fuelType = models.TextField(max_length=100)
+    chassisNumber = models.TextField(max_length=100)
+    engineNumber = models.TextField(max_length=100)
 
     def __str__(self):
-        return self.regAuth
+        return self.makerClass
 
 
 class userVehicleOwnership(models.Model):
@@ -49,4 +47,4 @@ class userVehicleOwnership(models.Model):
     regDate = models.DateField()
 
     def __str__(self):
-        return self.userId + self.vehicleId
+        return self.vehicleNumber
