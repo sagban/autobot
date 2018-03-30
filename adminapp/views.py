@@ -33,12 +33,12 @@ def adminLogin(request):
 
         args = {
                 'message': "You're already Logged in!",
-                'admin':request.session['admin']
+                'admin':request.session['admin'],
 
                 }
         return render(request, 'admin.html', args)
 
-    return render(request,"login.html",{"message":"Please, Login In Here",})
+    return render(request,"login.html",{"message":"Please, Login In Here",'type': 'policeadmin',})
 
 
 '''validate the details filled in admin form'''
