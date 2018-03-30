@@ -5,3 +5,5 @@ __pycache__/
 *.pyc
 .idea/workspace.xml
 autobot/__pycache__/urls.cpython-36.pyc
+autobot/__pycache__/settings.cpython-36.pyc
+autobot/__pycache__/urls.cpython-36.pyc
