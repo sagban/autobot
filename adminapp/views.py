@@ -15,7 +15,7 @@ from django.http import HttpResponseRedirect, JsonResponse
 def index(request):
     if request.method == 'POST':
         with Image.open(request.FILES['image']).convert("RGB") as image:
-            new_size = tuple(2 * x for x in image.size)
+            new_size = tuple(4 * x for x in image.size)
             image.compression_quality = 99
             image = image.resize(new_size, Image.ANTIALIAS)
             sharpened_image = image.filter(ImageFilter.SHARPEN)
