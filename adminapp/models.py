@@ -9,3 +9,13 @@ class Admin(models.Model):
 
     def __str__(self):
         return self.adminName
+
+class Crime(models.Model):
+    offenceId = models.AutoField(primary_key=True)
+    offenceName = models.TextField(max_length = 1000)
+    offencePenalty = models.IntegerField(null=True)
+    offenceSentence = models.TextField(max_length=1000,null=True)
+    offenceSection = models.TextField(max_length=1000)
+
+    def __str__(self):
+        return self.offenceName

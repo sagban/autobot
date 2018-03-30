@@ -16,7 +16,7 @@
             <div class="card">
                 <div class="card-content" id="adminDetails">
                     <h5 class="blue-grey-text text-darken-4">WelCome<br><span class="adminName blue-grey-text">{{admin.adminName}}</span><br><span class="adminUid amber-text text-lighten-2">@{{admin.adminUid}}</span></h5>
-
+                    <h5 class="red-text"><a href="/admin-logout"> LogOut </a></h5>
                 </div>
             </div>
         </div>
@@ -35,16 +35,16 @@
                                         </div>
 
                                         <div class="file-path-wrapper">
-                                        <input class="file-path validate" type="text">
-                                            <div class="image-result-container">
-                  <div class="image-container" data-js-image-container><img/></div><br />
-                  <div class="result-container result-default" data-js-result-container>&nbsp;</div>
-              </div>
-                 <br />
-                 <div class="button-container">
-                     <button class="btn btn-default" type="button" data-js-go-button>Extract Number Plate In Text</button>
-                 </div>
-                                      </div>
+                                            <input class="file-path validate" type="text">
+
+                                            <div class="image-result-container row">
+                                              <div class="image-container col m6 s12" data-js-image-container><img/></div>
+                                              <div class="result-container result-default col m6 s12" data-js-result-container></div>
+                                            </div>
+                                             <div class="button-container">
+                                                 <button class="btn btn-default" type="button" data-js-go-button>Extract Number Plate In Text</button>
+                                             </div>
+                                        </div>
                                     </div>
                                </form>
                          </div>
