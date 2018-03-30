@@ -12,50 +12,97 @@
     <body>
 {% include 'navbar.html'%}
 
-
-         <div class="row">
-             <div class="col m4 s6">
-                 <div class="card">
-
-        <div class="card-content">
-          <p>User Profile Info</p>
+<div class="container">
+    <div class="row">
+        <div class="col m4 s12">
+            <div class="card">
+                <div class="card-content">
+                    <p>User Profile Info</p>
+                </div>
+            <div class="card-action">
+                <ul>
+                  <li>Aadhaar Number : </li>
+                  <li>Name : </li>
+                  <li>DOB : </li>
+                  <li>Gender : </li>
+                  <li>Email : </li>
+                  <li>Address : </li>
+                  <li>Driver License Number : </li>
+                </ul>
+            </div>
         </div>
-        <div class="card-action">
-          <ul>
-              <li>Aadhaar Number : </li>
-              <li>Name : </li>
-              <li>DOB : </li>
-              <li>Gender : </li>
-              <li>Email : </li>
-              <li>Address : </li>
-              <li>Driver License Number : </li>
-          </ul>
-        </div>
-      </div>
+    </div>
+
+        <div class="col m8 s12">
+         <div class="card">
+             <div class="card-content">
+                <p>Notices</p>
              </div>
-              <div class="col m8 s6">
-                 <div class="card">
-
-        <div class="card-content">
-          <p>Notices</p>
-        </div>
-        <div class="card-action">
-        <ul class="collection">
-        <li class="collection-item"><div>Notice 1<a class=" secondary-content modal-trigger" href="#modal1""><i class="material-icons">error_outline</i></a></div></li>
-        <li class="collection-item"><div>Notice 2<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
-        <li class="collection-item"><div>Notice 3<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
-        <li class="collection-item"><div>Notice 4<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
-      </ul>
-        </div>
-
-  </button>
-      </div>
+             <div class="card-action">
+                 <ul class="collection">
+                    <li class="collection-item"><div>Notice 1<a class=" secondary-content modal-trigger" href="#modal1""><i class="material-icons">error_outline</i></a></div></li>
+                    <li class="collection-item"><div>Notice 2<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                    <li class="collection-item"><div>Notice 3<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                    <li class="collection-item"><div>Notice 4<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                 </ul>
              </div>
+         </div>
+    </div>
 
-
+        <div class="col m4 s12">
+        <div class="card">
+            <div class="card-content">
+                <p>My Vehicles</p>
+            </div>
+        <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#test4">Test 1</a></li>
+                <li class="tab"><a class="active" href="#test5">Test 2</a></li>
+                <li class="tab"><a href="#test6">Test 3</a></li>
+            </ul>
+        </div>
+        <div class="card-content grey lighten-4">
+            <div id="test4">
+                <ul id="veh1">
+                  <li>Registration Number : </li>
+                  <li>Maker Class : </li>
+                  <li>Maker Model : </li>
+                  <li>Fuel Type : </li>
+                  <li>Chassis Number : </li>
+                  <li>Engine Number : </li>
+                  <li>Registration Date : </li>
+                  <li>Registering Authority : </li>
+                </ul>
+            </div>
+            <div id="test5">
+                <ul id="veh2">
+                  <li>Registration Number : </li>
+                  <li>Maker Class : </li>
+                  <li>Maker Model : </li>
+                  <li>Fuel Type : </li>
+                  <li>Chassis Number : </li>
+                  <li>Engine Number : </li>
+                  <li>Registration Date : </li>
+                  <li>Registering Authority : </li>
+                </ul>
+            </div>
+            <div id="test6">
+                <ul id="veh3">
+                  <li>Registration Number : </li>
+                  <li>Maker Class : </li>
+                  <li>Maker Model : </li>
+                  <li>Fuel Type : </li>
+                  <li>Chassis Number : </li>
+                  <li>Engine Number : </li>
+                  <li>Registration Date : </li>
+                  <li>Registering Authority : </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- Notice Structure -->
-  <div id="modal1" class="modal modal-fixed-footer">
+             <!-- Notice Structure -->
+        <div id="modal1" class="modal modal-fixed-footer">
     <div class="modal-content">
       <h4>Modal Header</h4>
       <p>NOTICE CONTENT TO BE DISPLAYED HERE</p>
@@ -66,62 +113,13 @@
     </div>
   </div>
 
-
-<div class="row">
-    <div class="col m4 s6">
-    <div class="card">
-    <div class="card-content">
-      <p>My Vehicles</p>
     </div>
-    <div class="card-tabs">
-      <ul class="tabs tabs-fixed-width">
-        <li class="tab"><a href="#test4">Test 1</a></li>
-        <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-        <li class="tab"><a href="#test6">Test 3</a></li>
-      </ul>
-    </div>
-    <div class="card-content grey lighten-4">
-      <div id="test4">
-          <ul id="veh1">
-          <li>Registration Number : </li>
-          <li>Maker Class : </li>
-          <li>Maker Model : </li>
-          <li>Fuel Type : </li>
-          <li>Chassis Number : </li>
-          <li>Engine Number : </li>
-          <li>Registration Date : </li>
-          <li>Registering Authority : </li>
-        </ul>
-      </div>
-        <div id="test5">
-          <ul id="veh2">
-          <li>Registration Number : </li>
-          <li>Maker Class : </li>
-          <li>Maker Model : </li>
-          <li>Fuel Type : </li>
-          <li>Chassis Number : </li>
-          <li>Engine Number : </li>
-          <li>Registration Date : </li>
-          <li>Registering Authority : </li>
-        </ul>
-      </div>
-        <div id="test6">
-          <ul id="veh3">
-          <li>Registration Number : </li>
-          <li>Maker Class : </li>
-          <li>Maker Model : </li>
-          <li>Fuel Type : </li>
-          <li>Chassis Number : </li>
-          <li>Engine Number : </li>
-          <li>Registration Date : </li>
-          <li>Registering Authority : </li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
 </div>
-</div>
+
+
+
+
+
 
 
 
