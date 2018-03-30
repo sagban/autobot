@@ -31,8 +31,8 @@ urlpatterns = [
     path('admin-logout/', admin_views.adminOut),
     path('user-login/', user_views.userLogin),
     path('user-validate/', user_views.userLoginValidate),
-    path('sadmin-login/', superadmin_views.adminLogin),
-    path('sadmin-validate/', superadmin_views.adminLoginValidate),
-    path('sadminIn/', superadmin_views.adminIn),
-    path('sadmin-logout/', superadmin_views.adminOut),
+    path('sadmin-login/', superadmin_views.sadminLogin),
+    path('sadmin-validate/', superadmin_views.sadminLoginValidate),
+    path('sadminIn/', superadmin_views.sadminIn),
+    path('sadmin-logout/', superadmin_views.sadminOut),
 ]

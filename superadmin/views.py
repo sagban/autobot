@@ -4,23 +4,24 @@ from django.http import HttpResponseRedirect, JsonResponse
 # Create your views here.
 
 '''Provides the login Page'''
-def adminLogin(request):
+def sadminLogin(request):
 
     '''If already Login'''
     if request.session.get("sadmin-login", False):
 
         args = {
                 'message': "You're already Logged in!",
-                'sadmin':request.session['sadmin']
+                'sadmin':request.session['sadmin'],
+
 
                 }
         return render(request, 'admin.html', args)
 
-    return render(request,"login.html",{"message":"Please, Login In Here",})
+    return render(request,"slogin.html",{"message":"Please, Login In Here",'type' : "superadmin",})
 
 
 '''validate the details filled in admin form'''
-def adminLoginValidate(request):
+def sadminLoginValidate(request):
     if request.session.get("sadmin-login", False):
 
         args = {
@@ -55,7 +56,7 @@ def adminLoginValidate(request):
                 }
                 request.session.set_expiry(60000)
 
-                '''Redirecting to /adminIn'''
+                '''Redirecting to /sadminIn'''
                 return HttpResponseRedirect('/sadminIn')
             else:
                 args = {"message": "Enter the valid ID and Password",
@@ -66,7 +67,7 @@ def adminLoginValidate(request):
     return render(request, 'login.html', args)
 
 '''Loads the admin page or dashboard after the validation'''
-def adminIn(request):
+def sadminIn(request):
     if request.session.get("sadmin-login",False):
         if request.session.get("sadmin",False):
             args={
@@ -81,7 +82,7 @@ def adminIn(request):
     return render(request, 'login.html', args)
 
 
-def adminOut(request):
+def sadminOut(request):
 
     if request.session.get("sadmin-login",False):
         request.session.pop("sadmin-login")
