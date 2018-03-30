@@ -1,0 +1,153 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+p{
+    color:red;
+}
+
+.radio-button-css{
+  position: relative !important;
+  z-index: 120;
+  // opacity: 1 !important;
+  left: 18px !important;
+}
+
+.brand-logo {
+    margin: 0px !important;
+}
+
+
+#login_form {
+    background: #f3f3f3;
+    padding:80px 0px;
+    margin-top:60px;
+    margin-bottom:80px;
+    border-radius:5px;
+}
+
+#login_form h5 {
+    text-align: center;
+}
+
+.main_head{
+  width:100%;
+  text-align:center;
+  padding-top:40px;
+  position:relative;
+
+}
+.main_head h3{
+  font-size:40px;
+}
+.main_head h4{
+  font-size:20px;
+}
+.team_head{
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+nav li:hover{
+    color:#ff000;
+}
+
+.error{
+    color:#ff0000;
+    text-align: center;
+    padding: 0px;
+}
+
+.question{
+    padding: 40px 0px;
+    width:100%;
+    position:relative;
+}
+.question_li{
+    width:80%;
+    padding:5px 0px;
+    position:relative;
+    display:block;
+}
+.question_submit{
+    margin-bottom: 50px;
+    position:relative;
+}
+.question_no{
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.option{
+  display:inline-block;
+  margin-bottom:1px;
+}
+
+
+.team{
+  width:100%;
+  text-align:left;
+}
+
+.team .main_head{
+  text-align:left;
+}
+.team p{
+  color:#949494;
+  font-size:12px;
+  font-weight:300;
+}
+
+.review{
+    top:30%;
+    position:relative;
+}
+#review{
+    height:700px;
+    max-width:100% !important;
+    background:aliceblue;
+    padding-top:10px;
+    margin:0px;
+    width:100%;
+    text-align:center
+}
+
+#results{
+    min-height:700px;
+    max-width:100% !important;
+    background:aliceblue;
+    padding-top:10px;
+    margin:0px;
+    width:100%;
+    text-align:center
+}
+
+
+@media(min-height:1023px){
+  #review{
+    height:800px
+  }
+}
+@media(min-height:1323px){
+  #review{
+    height:1200px
+  }
+}
+
+@media (max-width: 600px) {
+    #login_form {
+        width: 90%;
+        padding:30px;
+    }
+    .main_head h3{
+      font-size:25px;
+    }
+    .main_head h4{
+      font-size:15px;
+    }
+    .error{
+
+        font-size: 10px;
+    }
+}
+
+

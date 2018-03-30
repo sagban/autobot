@@ -5,6 +5,8 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
 from adminapp.models import *
+from django.http import HttpResponseRedirect
+from adminapp.fusioncharts import *
 from django.http import HttpResponseRedirect, JsonResponse
 
 # Create your views here.
@@ -113,6 +115,9 @@ def addCrime(request):
         'message': "Please, Login In Here",
     }
     return render(request, "login.html",args)
+
+
+
 
 
 def adminOut(request):
