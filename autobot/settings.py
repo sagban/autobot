@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'adminapp.apps.AdminappConfig',
     'userapp.apps.UserappConfig',
+    'superadmin.apps.SuperadminConfig',
     'botapp.apps.BotappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
