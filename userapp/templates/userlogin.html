@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin Login | Autobot</title>
+    <title>User Login | AutoNoticeBot</title>
 
     {% load staticfiles %}
     {%include "header.html"%}
     <link rel="stylesheet" href="{% static 'css/login.css'%}" type="text/css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
 
@@ -16,15 +18,15 @@
   <main>
     <center>
       <h5 class="blue-grey-text text-darken-4">User Login</h5>
-      <div class="section"></div>
+      <!--<div class="section"></div>-->
 
       <h5 class="blue-grey-text text-darken-4">{{message}}</h5>
       <div class="section"></div>
 
-      <div class="container">
+      <div class="container col m4 s12">
         <div class="z-depth-1 blue-grey lighten-5 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 
-          <form class="col s12" method="post" action="/admin-validate/">
+          <form class="col s12" method="post" action="/user-validate/">
             <div class='row'>
               <div class='col s12'>
               </div>
@@ -32,32 +34,42 @@
             {% csrf_token %}
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='admin-id' id='admin-id' />
-                <label for='admin-id'>Enter your Aadhaar ID</label>
+                <input class='validate' type='text' name='user-id' id='user-id' />
+                <label for='user-id'>Enter your Aadhaar ID</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='text' name='admin-mobile' id='admin-mobile' />
-                <label for='admin-mobile'>Enter your Register Mobile No.</label>
+                <input class='validate' type='text' name='user-mail' id='user-mail' />
+                <label for='user-mail'>Enter your Email</label>
               </div>
             </div>
 
             <div class='row'>
               <div class='input-field col s12'>
-                <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Enter your pass</label>
+                <input class='validate' type='text' name='user-cell' id='user-cell' />
+                <label for='user-cell'>Enter your Mobile Number</label>
               </div>
-              <label style='float: right;'>
-								<a class='blue-grey-text' href='#!'><b>Forgot Password?</b></a>
-							</label>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='user-pass' id='user-pass' />
+                <label for='user-pass'>Enter your Password</label>
+              </div>
+              <!--<label style='float: right;'>
+								<a class='blue-grey-text' href='../forgot-password'><b>Forgot Password?</b></a>
+              </label>
+              <label style='float: left;'>
+								<a class='blue-grey-text' href='../register-user'><b>New User? Register Here!</b></a>
+              </label>-->
             </div>
 
             <br />
             <center>
               <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect blue-grey darken-4'>Request OTP</button>
+                <a class="waves-effect waves-light btn modal-trigger" href="#otp" type="submit">Request OTP</a>
               </div>
             </center>
           </form>
@@ -69,8 +81,33 @@
     <div class="section"></div>
   </main>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<!-- OTP Structure -->
+  <div id="otp" class="modal">
+    <div class="modal-content">
+      <h4>Enter your OTP</h4>
+      <div class="input-field col m8 s12">
+          <i class="material-icons prefix">lock</i>
+          <input id="otp" type="tel" class="validate">
+          <label for="otp">OTP</label>
+        </div>
+    </div>
+<div class="modal-footer">
+      <button name='btn_login' class='col s12 btn waves-effect'>Request New OTP</button>
+      <button type='submit' name='btn_login' class='col s12 btn waves-effect'>Login</button>
+    </div>
+  </div>
+
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+</script>
 
 {%include 'footer.html'%}
 
