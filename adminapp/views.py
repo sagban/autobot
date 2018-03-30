@@ -107,8 +107,11 @@ def adminIn(request):
 def addCrime(request):
     if request.session.get("admin-login", False):
 
+        offences = Crime.objects.all()
         args = {
-                'message': "You're already Logged in!",
+                'message': "Make the charge sheet here",
+                "offences" : offences,
+                "admin": request.session['admin'],
                 }
         return render(request, 'addcrime.html', args)
     args = {
