@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class User(models.Model):
     userID = models.AutoField(primary_key=True)
     userName = models.TextField(max_length= 80)
@@ -11,9 +13,11 @@ class User(models.Model):
     userMail = models.EmailField()
     userAddress = models.TextField(max_length=1000)
     userLicense = models.TextField(max_length=15)
+    userCell = models.TextField(max_length=10)
 
     def __str__(self):
         return self.userUID
+
 
 class Vehicles(models.Model):
     vehicleID = models.AutoField(primary_key=True)
@@ -28,7 +32,11 @@ class Vehicles(models.Model):
     def __str__(self):
         return self.vehicleID
 
+
 class UserVehicleOwnership(models.Model):
     UserVehicleID = models.AutoField(primary_key=True)
-    userID = models.ForeignKey(User, null=False)
-    vehicleID = models.ForeignKey(Vehicles, null=False)
+    userID = models.ForeignKey(User, null=False, on_delete=models.CASCADE)
+    vehicleID = models.ForeignKey(Vehicles, null=False, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.UserVehicleID
