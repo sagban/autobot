@@ -1,154 +1,313 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>User Dashboard | Login</title>
-        <!-- Compiled and minified CSS -->
-          <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<head>
+    <title>User Dashboard | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified CSS -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-    </head>
-    <body>
+</head>
+<body>
 {% include 'navbar.html'%}
 
-
-         <div class="row">
-             <div class="col m4 s6">
-                 <div class="card">
-
-        <div class="card-content">
-          <p>User Profile Info</p>
+<div class="container">
+    <div class="row">
+        <div class="col m4 s12">
+            <div class="card">
+<<<<<<< HEAD
+                <div class="card-content">
+                    <p>User Profile Info</p>
+                </div>
+            <div class="card-action">
+                <ul>
+                  <li>Aadhaar Number : </li>
+                  <li>Name : </li>
+                  <li>DOB : </li>
+                  <li>Gender : </li>
+                  <li>Email : </li>
+                  <li>Address : </li>
+                  <li>Driver License Number : </li>
+                </ul>
+            </div>
         </div>
-        <div class="card-action">
-          <ul>
-              <li>Aadhaar Number : </li>
-              <li>Name : </li>
-              <li>DOB : </li>
-              <li>Gender : </li>
-              <li>Email : </li>
-              <li>Address : </li>
-              <li>Driver License Number : </li>
-          </ul>
-        </div>
-      </div>
+    </div>
+
+        <div class="col m8 s12">
+         <div class="card">
+             <div class="card-content">
+                <p>Notices</p>
              </div>
-              <div class="col m8 s6">
-                 <div class="card">
-
-        <div class="card-content">
-          <p>Notices</p>
-        </div>
-        <div class="card-action">
-        <ul class="collection">
-        <li class="collection-item"><div>Notice 1<a class=" secondary-content modal-trigger" href="#modal1""><i class="material-icons">error_outline</i></a></div></li>
-        <li class="collection-item"><div>Notice 2<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
-        <li class="collection-item"><div>Notice 3<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
-        <li class="collection-item"><div>Notice 4<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
-      </ul>
-        </div>
-
-  </button>
-      </div>
+             <div class="card-action">
+                 <ul class="collection">
+                    <li class="collection-item"><div>Notice 1 &emsp;&emsp;&emsp;&emsp; #65497<a class=" secondary-content modal-trigger" href="#modal1""><i class="material-icons">error_outline</i></a></div></li>
+                    <li class="collection-item"><div>Notice 2 &emsp;&emsp;&emsp;&emsp; #98765<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                    <li class="collection-item"><div>Notice 3 &emsp;&emsp;&emsp;&emsp; #31685<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                    <li class="collection-item"><div>Notice 4 &emsp;&emsp;&emsp;&emsp; #79645<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                 </ul>
              </div>
+         </div>
+    </div>
+
+        <div class="col m4 s12">
+        <div class="card">
+            <div class="card-content">
+                <p>My Vehicles</p>
+            </div>
+        <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#test4">Test 1</a></li>
+                <li class="tab"><a class="active" href="#test5">Test 2</a></li>
+                <li class="tab"><a href="#test6">Test 3</a></li>
+            </ul>
+        </div>
+        <div class="card-content grey lighten-4">
+            <div id="test4">
+                <ul id="veh1">
+                  <li>Registration Number : </li>
+                  <li>Maker Class : </li>
+                  <li>Maker Model : </li>
+                  <li>Fuel Type : </li>
+                  <li>Chassis Number : </li>
+                  <li>Engine Number : </li>
+                  <li>Registration Date : </li>
+                  <li>Registering Authority : </li>
+                </ul>
+            </div>
+            <div id="test5">
+                <ul id="veh2">
+                  <li>Registration Number : </li>
+                  <li>Maker Class : </li>
+                  <li>Maker Model : </li>
+                  <li>Fuel Type : </li>
+                  <li>Chassis Number : </li>
+                  <li>Engine Number : </li>
+                  <li>Registration Date : </li>
+                  <li>Registering Authority : </li>
+                </ul>
+            </div>
+            <div id="test6">
+                <ul id="veh3">
+                  <li>Registration Number : </li>
+                  <li>Maker Class : </li>
+                  <li>Maker Model : </li>
+                  <li>Fuel Type : </li>
+                  <li>Chassis Number : </li>
+                  <li>Engine Number : </li>
+                  <li>Registration Date : </li>
+                  <li>Registering Authority : </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+=======
+
+                <div class="card-content">
+                    <p>User Profile Info</p>
+                </div>
+                <div class="card-action">
+                    <ul>
+                        <li>Aadhaar Number : </li>
+                        <li>Name : </li>
+                        <li>DOB : </li>
+                        <li>Gender : </li>
+                        <li>Email : </li>
+                        <li>Address : </li>
+                        <li>Driver License Number : </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col m8 s12">
+            <div class="card">
+
+                <div class="card-content">
+                    <p>Notices</p>
+                </div>
+                <div class="card-action">
+                    <ul class="collection">
+                        <li class="collection-item"><div>Notice 1<a class=" secondary-content modal-trigger" href="#modal1""><i class="material-icons">error_outline</i></a></div></li>
+                        <li class="collection-item"><div>Notice 2<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                        <li class="collection-item"><div>Notice 3<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                        <li class="collection-item"><div>Notice 4<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                    </ul>
+                </div>
+
+                </button>
+            </div>
+        </div>
+>>>>>>> master
+
+        <!-- Notice Structure -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+<<<<<<< HEAD
+                <h4>Notice ######</h4>
+                <p>NOTICE CONTENT TO BE DISPLAYED HERE</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#complain" class="modal-action modal-close waves-effect waves-green btn-flat modal-trigger">Complain <i class="material-icons">error</i></a>
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Proceed to Pay <i class="material-icons">send</i></a>
+            </div>
+        </div>
+
+        <!-- Complain Form Structure -->
+        <div id="complain" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Complain against Notice</h4>
+                <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input placeholder="NOTICE ID" id="notice_id" type="text" class="validate">
+                          <label for="notice_id">Notice ID</label>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                <div class="input-field col s12">
+                    <select>
+                      <option value="" disabled selected>Choose your option</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                    <label>Materialize Select</label>
+                </div>
+                <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <i class="material-icons prefix">mode_edit</i>
+                          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                          <label for="icon_prefix2">Optional Comment</label>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Go Back <i class="material-icons">error</i></a>
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Send Complain <i class="material-icons">send</i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+=======
+                <h4>Modal Header</h4>
+                <p>NOTICE CONTENT TO BE DISPLAYED HERE</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Complain <i class="material-icons">error</i></a>
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Proceed to Pay <i class="material-icons">send</i></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col m4 s12">
+            <div class="card">
+                <div class="card-content">
+                    <p>My Vehicles</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a href="#test4">Test 1</a></li>
+                        <li class="tab"><a class="active" href="#test5">Test 2</a></li>
+                        <li class="tab"><a href="#test6">Test 3</a></li>
+                    </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                    <div id="test4">
+                        <ul id="veh1">
+                            <li>Registration Number : </li>
+                            <li>Maker Class : </li>
+                            <li>Maker Model : </li>
+                            <li>Fuel Type : </li>
+                            <li>Chassis Number : </li>
+                            <li>Engine Number : </li>
+                            <li>Registration Date : </li>
+                            <li>Registering Authority : </li>
+                        </ul>
+                    </div>
+                    <div id="test5">
+                        <ul id="veh2">
+                            <li>Registration Number : </li>
+                            <li>Maker Class : </li>
+                            <li>Maker Model : </li>
+                            <li>Fuel Type : </li>
+                            <li>Chassis Number : </li>
+                            <li>Engine Number : </li>
+                            <li>Registration Date : </li>
+                            <li>Registering Authority : </li>
+                        </ul>
+                    </div>
+                    <div id="test6">
+                        <ul id="veh3">
+                            <li>Registration Number : </li>
+                            <li>Maker Class : </li>
+                            <li>Maker Model : </li>
+                            <li>Fuel Type : </li>
+                            <li>Chassis Number : </li>
+                            <li>Engine Number : </li>
+                            <li>Registration Date : </li>
+                            <li>Registering Authority : </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+>>>>>>> master
 
 
 </div>
-<!-- Notice Structure -->
-  <div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>NOTICE CONTENT TO BE DISPLAYED HERE</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Complain <i class="material-icons">error</i></a>
-      <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Proceed to Pay <i class="material-icons">send</i></a>
-    </div>
-  </div>
 
-
-<div class="row">
-    <div class="col m4 s6">
-    <div class="card">
-    <div class="card-content">
-      <p>My Vehicles</p>
-    </div>
-    <div class="card-tabs">
-      <ul class="tabs tabs-fixed-width">
-        <li class="tab"><a href="#test4">Test 1</a></li>
-        <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-        <li class="tab"><a href="#test6">Test 3</a></li>
-      </ul>
-    </div>
-    <div class="card-content grey lighten-4">
-      <div id="test4">
-          <ul id="veh1">
-          <li>Registration Number : </li>
-          <li>Maker Class : </li>
-          <li>Maker Model : </li>
-          <li>Fuel Type : </li>
-          <li>Chassis Number : </li>
-          <li>Engine Number : </li>
-          <li>Registration Date : </li>
-          <li>Registering Authority : </li>
-        </ul>
-      </div>
-        <div id="test5">
-          <ul id="veh2">
-          <li>Registration Number : </li>
-          <li>Maker Class : </li>
-          <li>Maker Model : </li>
-          <li>Fuel Type : </li>
-          <li>Chassis Number : </li>
-          <li>Engine Number : </li>
-          <li>Registration Date : </li>
-          <li>Registering Authority : </li>
-        </ul>
-      </div>
-        <div id="test6">
-          <ul id="veh3">
-          <li>Registration Number : </li>
-          <li>Maker Class : </li>
-          <li>Maker Model : </li>
-          <li>Fuel Type : </li>
-          <li>Chassis Number : </li>
-          <li>Engine Number : </li>
-          <li>Registration Date : </li>
-          <li>Registering Authority : </li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</div>
-</div>
-
-
-
-
-    <script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
 
 
 
 
-    <script>
+<script>
 
-        $(function(){
-            $(".button-collapse").sideNav();
-        });
+    $(function(){
+        $(".button-collapse").sideNav();
+    });
 
+<<<<<<< HEAD
         $(document).ready(function(){
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
   });
+        $(document).ready(function() {
+    $('select').material_select();
+  });
+=======
+    $(document).ready(function(){
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+>>>>>>> master
 
-    </script>
+</script>
 
 
-    </body>
+</body>
 </html>

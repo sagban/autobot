@@ -9,18 +9,18 @@ def userLoginValidate(request):
     if request.session.get("user-login", False):
 
         args = {
-                'message': "You're already Logged in!",
-                }
+            'message': "You're already Logged in!",
+        }
         return render(request, 'user.html', args)
 
     if request.method == "POST":
 
-        if request.POST["user-id"] == '' or request.POST["user-pass"] == '' or request.POST["user-cell"] == '' or request.POST['user-mail'] == '':
+        if request.POST["user-id"] == '' or request.POST["user-pass"] == '' or (request.POST["user-cell"] == '' and request.POST['user-mail'] == ''):
             args = {"message": "Login Credentials can't be left blank!"}
             return render(request, 'userlogin.html', args)
 
         else:
-            if request.POST["user-pass"] == 'mypass@1234' and request.POST["user-id"] == '987654321000' and request.POST["user-mail"] == 'myemail@website.com' and request.POST['user-cell'] == '9876543210':
+            if request.POST["user-pass"] == '123456' and request.POST["user-id"] == '987654321000' and (request.POST["user-mail"] == 'asdf' or request.POST['user-cell'] == '9876543210'):
                 request.session["user-login"] = True
                 return render(request, 'user.html', {})
             else:
@@ -29,10 +29,3 @@ def userLoginValidate(request):
 
     args = {"message": "Enter valid credentials!"}
     return render(request, 'userlogin.html', args)
-
-
-def userForgotPass (request):
-    return render (request, "fgtpswd.html")
-
-def userNewRegister (request):
-    return render(request, "newuserreg.html")
