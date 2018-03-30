@@ -1,4 +1,5 @@
 import pytesseract
+# import cv2
 from PIL import Image, ImageFilter
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
@@ -13,8 +14,9 @@ from django.http import HttpResponseRedirect, JsonResponse
 @csrf_exempt
 def index(request):
     if request.method == 'POST':
-        with Image.open(request.FILES['image']) as image:
+        with Image.open(request.FILES['image']).convert("RGB") as image:
             new_size = tuple(2 * x for x in image.size)
+            image.compression_quality = 99
             image = image.resize(new_size, Image.ANTIALIAS)
             sharpened_image = image.filter(ImageFilter.SHARPEN)
             utf8_text = pytesseract.image_to_string(sharpened_image)
