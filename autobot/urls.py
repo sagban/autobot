@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin-validate/', admin_views.adminLoginValidate),
     path('adminIn/', admin_views.adminIn),
     path('addcrime/', admin_views.addCrime),
+    path('admin-logout/', admin_views.adminOut),
     path('user-login/', user_views.userLogin),
     path('user-validate/', user_views.userLoginValidate),
 ]
