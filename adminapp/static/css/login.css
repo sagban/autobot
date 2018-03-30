@@ -90,4 +90,11 @@
 
     .card-image, .card-no{
         padding:20px;
+        min-height: 260px;
+    }
+
+    @media(min-width:1000px){
+        .brand-logo{
+         margin-left:30px;
+    }
     }
