@@ -40,10 +40,10 @@
              </div>
              <div class="card-action">
                  <ul class="collection">
-                    <li class="collection-item"><div>Notice 1<a class=" secondary-content modal-trigger" href="#modal1""><i class="material-icons">error_outline</i></a></div></li>
-                    <li class="collection-item"><div>Notice 2<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
-                    <li class="collection-item"><div>Notice 3<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
-                    <li class="collection-item"><div>Notice 4<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                    <li class="collection-item"><div>Notice 1 &emsp;&emsp;&emsp;&emsp; #65497<a class=" secondary-content modal-trigger" href="#modal1""><i class="material-icons">error_outline</i></a></div></li>
+                    <li class="collection-item"><div>Notice 2 &emsp;&emsp;&emsp;&emsp; #98765<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                    <li class="collection-item"><div>Notice 3 &emsp;&emsp;&emsp;&emsp; #31685<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
+                    <li class="collection-item"><div>Notice 4 &emsp;&emsp;&emsp;&emsp; #79645<a href="#" class="secondary-content"><i class="material-icons">error_outline</i></a></div></li>
                  </ul>
              </div>
          </div>
@@ -101,18 +101,59 @@
         </div>
     </div>
 </div>
-             <!-- Notice Structure -->
-        <div id="modal1" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>NOTICE CONTENT TO BE DISPLAYED HERE</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Complain <i class="material-icons">error</i></a>
-      <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Proceed to Pay <i class="material-icons">send</i></a>
-    </div>
-  </div>
 
+        <!-- Notice Structure -->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Notice ######</h4>
+                <p>NOTICE CONTENT TO BE DISPLAYED HERE</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#complain" class="modal-action modal-close waves-effect waves-green btn-flat modal-trigger">Complain <i class="material-icons">error</i></a>
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Proceed to Pay <i class="material-icons">send</i></a>
+            </div>
+        </div>
+
+        <!-- Complain Form Structure -->
+        <div id="complain" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Complain against Notice</h4>
+                <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input placeholder="NOTICE ID" id="notice_id" type="text" class="validate">
+                          <label for="notice_id">Notice ID</label>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                <div class="input-field col s12">
+                    <select>
+                      <option value="" disabled selected>Choose your option</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                    <label>Materialize Select</label>
+                </div>
+                <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <i class="material-icons prefix">mode_edit</i>
+                          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                          <label for="icon_prefix2">Optional Comment</label>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Go Back <i class="material-icons">error</i></a>
+                <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Send Complain <i class="material-icons">send</i></a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -143,6 +184,9 @@
         $(document).ready(function(){
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
     $('.modal').modal();
+  });
+        $(document).ready(function() {
+    $('select').material_select();
   });
 
     </script>
