@@ -18,6 +18,7 @@ from django.urls import path
 from botapp import views as bot_views
 from adminapp import views as admin_views
 from userapp import views as user_views
+from superadmin import views as superadmin_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +31,8 @@ urlpatterns = [
     path('admin-logout/', admin_views.adminOut),
     path('user-login/', user_views.userLogin),
     path('user-validate/', user_views.userLoginValidate),
+    path('sadmin-login/', superadmin_views.adminLogin),
+    path('sadmin-validate/', superadmin_views.adminLoginValidate),
+    path('sadminIn/', superadmin_views.adminIn),
+    path('sadmin-logout/', superadmin_views.adminOut),
 ]
