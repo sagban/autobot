@@ -25,7 +25,7 @@ class user(models.Model):
     userCell = models.ForeignKey(userRegister, null=False, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.userName
+        return self.userId
 
 
 class vehicle(models.Model):
@@ -38,7 +38,7 @@ class vehicle(models.Model):
     regAuth = models.TextField(max_length=20)
 
     def __str__(self):
-        return self.engineNumber
+        return self.regAuth
 
 
 class userVehicleOwnership(models.Model):
