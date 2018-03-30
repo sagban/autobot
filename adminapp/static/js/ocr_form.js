@@ -6,7 +6,7 @@ $(document).ready(function() {
         event.stopPropagation();
         event.preventDefault();
         var file = event.target.files[0];
-
+        console.log(event.target.files);
         var fileReader = new FileReader();
         fileReader.onload = (function(theFile) {
             return function(event) {
@@ -15,6 +15,22 @@ $(document).ready(function() {
         })(file);
         fileReader.readAsDataURL(file);
     });
+    // $(document).ready(function() {
+    // var $imageInput2 = $("[data-js-image-input-upload]");
+    // var $imageContainer2 = $("[data-js-image-container-upload]");
+    // $imageInput2.change(function(event) {
+    //     event.stopPropagation();
+    //     event.preventDefault();
+    //     var file = event.target.files[0];
+    //     console.log(event.target.files);
+    //     var fileReader = new FileReader();
+    //     fileReader.onload = (function(theFile) {
+    //         return function(event) {
+    //             $imageContainer2.html('<img class="image" src="' + event.target.result + '">');
+    //         };
+    //     })(file);
+    //     fileReader.readAsDataURL(file);
+    // });
     $("[data-js-go-button]").click(function(event) {
         event.stopPropagation();
         event.preventDefault();
