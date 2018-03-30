@@ -9,6 +9,10 @@ from django.http import HttpResponseRedirect
 from adminapp.fusioncharts import *
 from django.http import HttpResponseRedirect, JsonResponse
 
+#importing user models here
+from userapp.models import *
+import re
+
 # Create your views here.
 '''The image processing function. Extract number plate in text from image'''
 
@@ -22,7 +26,12 @@ def index(request):
             image = image.resize(new_size, Image.ANTIALIAS)
             sharpened_image = image.filter(ImageFilter.SHARPEN)
             utf8_text = pytesseract.image_to_string(sharpened_image)
-        return JsonResponse({'utf8_text': utf8_text})
+        regex_strings = re.search("^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$",utf8_text)
+        regex_string = regex_strings[0]
+        #if regex_string is not Null:
+        request.session['utf'] = regex_string;
+        return JsonResponse({'utf8_text': regex_string})
+        #return JsonResponse({'utf8_text': 'sagar'})
     return render(request, 'admin.html')
 
 '''Provides the login Page'''
@@ -102,6 +111,24 @@ def adminIn(request):
     }
     return render(request, 'login.html', args)
 
+
+def numberValidate(request):
+    if request.session.get("admin-login",False):
+
+
+        if request.POST["image-input"] != '':
+            if request.session.get("utf",False):
+                regNumber = request.session["utf"];
+                '''Search The User Db here'''
+                return HttpResponseRedirect("/addcrime")
+            return HttpResponseRedirect("/adminIn")
+        elif request.POST["text-input"] != '':
+            regNumber = request.POST["text-input"]
+            '''Search The User Db here'''
+            return HttpResponseRedirect("/addcrime")
+        return HttpResponseRedirect("/adminIn")
+
+    return HttpResponseRedirect("/admin-login")
 
 '''Yet to complete, Most probably this function will call after the image processing or vehical number validation for the criminal search.'''
 def addCrime(request):

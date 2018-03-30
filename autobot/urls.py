@@ -29,6 +29,7 @@ urlpatterns = [
     path('upload-image/', admin_views.index),
     path('addcrime/', admin_views.addCrime),
     path('admin-logout/', admin_views.adminOut),
+    path('number-validate/', admin_views.numberValidate),
     path('user-login/', user_views.userLogin),
     path('user-validate/', user_views.userLoginValidate),
     path('sadmin-login/', superadmin_views.sadminLogin),
