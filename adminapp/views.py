@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from adminapp.models import *
 from django.http import HttpResponseRedirect
+from adminapp.fusioncharts import *
 # Create your views here.
 
 '''Provides the login Page'''
@@ -92,3 +93,17 @@ def addCrime(request):
         'message': "Please, Login In Here",
     }
     return render(request, "login.html",args)
+
+def adminReport(request):
+    if request.session.get("admin-report",False):
+        if request.session.get("admin",False):
+            args={
+                "admin":request.session['admin'],
+            }
+            return render(request, 'report.html', args)
+        return HttpResponseRedirect('/admin-validate')
+    args = {
+        'message': "Please Login Here!",
+        "value": False,
+    }
+    return render(request, 'login.html', args)

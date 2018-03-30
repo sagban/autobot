@@ -9,8 +9,8 @@ def userLoginValidate(request):
     if request.session.get("user-login", False):
 
         args = {
-                'message': "You're already Logged in!",
-                }
+            'message': "You're already Logged in!",
+        }
         return render(request, 'user.html', args)
 
     if request.method == "POST":
