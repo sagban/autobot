@@ -92,3 +92,12 @@ def addCrime(request):
         'message': "Please, Login In Here",
     }
     return render(request, "login.html",args)
+
+
+def adminOut(request):
+
+    if request.session.get("admin-login",False):
+        request.session.pop("admin-login")
+        return render(request,"login.html",{"message":"You're sucessfully log out"})
+
+    return render(request, "login.html", {"message": "You're Already log out"})
