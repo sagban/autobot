@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Login | RTO</title>
+    {% load staticfiles %}
+    {%include 'header.html'%}
+    <link rel="stylesheet" href="{% static 'css/login.css'%}" type="text/css" />
+  </head>
+<body>
+
+{%include 'navbar.html'%}
+<div class="container" id="containerLogin">
+  <div class="" style="text-align: center;" id="loginDiv">
+      <div class="row" id="crimeDiv">
+        <div class="col m3 s12">
+            <div class="card">
+                <div class="card-content" id="adminDetails">
+                    <h5 class="blue-grey-text text-darken-4">WelCome<br><span class="adminName blue-grey-text">{{admin.adminName}}</span><br><span class="adminUid amber-text text-lighten-2">@{{admin.adminUid}}</span></h5>
+
+                </div>
+            </div>
+        </div>
+        <div class="col m9 s12">
+            <div class="row">
+                <div class="col m5 s12">
+                    <div class="card card-image">
+                         <h5>Search by Image</h5>
+                         <div class="card-content">
+                               <form action="#">
+                                    <div class="file-field input-field">
+
+                                        <div class="btn waves-effect blue-grey">
+                                            <i class="material-icons">image</i>
+                                            <input type="file">
+                                        </div>
+
+                                        <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text">
+                                      </div>
+                                    </div>
+                               </form>
+                         </div>
+                    </div>
+                </div>
+                <div class="col m1 s12">
+                    <div class="blue-grey-text">OR</div>
+                </div>
+                <div class="col m6 s12">
+
+
+                    <div class="card card-no">
+                        <h5>Search by Vehical Number</h5>
+                     <div class="card-content">
+                           <form action="#">
+                              <div class="row">
+                                <div class="input-field col s12 m12" id="text-search">
+                                  <i class="material-icons prefix">directions_car</i>
+                                  <input id="icon_prefix" type="text" class="validate">
+                                  <label for="icon_prefix">Vehical Number</label>
+                                </div>
+
+                              </div>
+                            </form>
+                     </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card card-image">
+             <h5>Upload Evidence</h5>
+             <div class="card-content">
+                   <form action="#">
+                        <div class="file-field input-field">
+                          <div class="btn waves-effect blue-grey">
+                            <i class="material-icons">image</i>
+                            <input type="file">
+                          </div>
+                          <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+
+                          </div>
+                        </div>
+                   </form>
+             </div>
+
+            </div>
+
+
+        </div>
+      </div>
+
+
+
+
+  </div>
+</div>
+{% include 'footer.html' %}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script>
+
+</script>
+  <!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="{% static 'js/script.js'%}"></script>
+
+</body>
+</html>
