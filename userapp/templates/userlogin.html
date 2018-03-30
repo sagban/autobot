@@ -41,18 +41,18 @@
 
                         <div class='row'>
                             <label style='float: left;'>
-                                <a class='blue-grey-text' href='../register-user'><b>Not registered? Register here!</b></a>
+                                <a class='blue-grey-text modal-trigger' href='#newreg'><b>Not registered? Register here!</b></a>
                             </label>
                         </div>
 
                         <br>
 
                         <div class='row'>
-                            <a class="waves-effect waves-light btn modal-trigger" href="#otp">Request OTP</a>
+                            <a class="waves-effect waves-light btn modal-trigger blue-grey darken-4" href="#otp">Request OTP</a>
                         </div>
 
                         <!-- Request OTP Structure -->
-                        <div id="otp" class="modal">
+                        <div id="otp" class="modal" style="z-index: 5">
                             <div class="modal-content">
                                 <h4>Enter your OTP</h4>
                                 <div class="input-field col m8 s12">
@@ -62,9 +62,39 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <a name='new_otp' href="/user-login">Request New OTP</a>
-                                <button type='submit' name='login' id='login' class='col s12 btn waves-effect'>Login</button>
+                                <a name='new_otp' class="blue-grey-text" href="/user-login">Request New OTP</a>
+                                <button type='submit' name='login' id='login' class='col s12 btn waves-effect blue-grey darken-4'>Login</button>
                             </div>
+                        </div>
+
+                         <!-- New User Register -->
+                        <div id="newreg" class="modal">
+                            <div class="modal-content row">
+                                <h4>Register Here</h4>
+                                <div class="input-field col m12 s12">
+                                    <i class="material-icons prefix">perm_identity</i>
+                                    <input id="newuserid" name="newuserid" type="text" class="validate">
+                                    <label for="newuserid">Enter Your Mobile Number</label>
+                                </div>
+                                <div class="input-field col m12 s12">
+                                    <i class="material-icons prefix">credit_card</i>
+                                    <input id="newuserlic" name="newuserlic" type="text" class="validate">
+                                    <label for="newuserlic">Enter Your Mobile Number</label>
+                                </div>
+                                <div class="input-field col m12 s12">
+                                    <i class="material-icons prefix">call</i>
+                                    <input id="userusertel" name="newusertel" type="text" class="validate">
+                                    <label for="newusertel">Enter Your Mobile Number</label>
+                                </div>
+                                <div class="modal-footer col m12 s12">
+                                <a name='new_otp' class="blue-grey-text" href="#newreg">Request New OTP</a>
+                                <div class='row'>
+                                    <a class="waves-effect waves-light btn modal-trigger blue-grey darken-4" href="#otp">Request OTP</a>
+                                </div>
+                            </div>
+                            </div>
+
+
                         </div>
                     </form>
                 </div>
