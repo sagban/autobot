@@ -5,6 +5,8 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 
 from adminapp.models import *
+from django.http import HttpResponseRedirect
+from adminapp.fusioncharts import *
 from django.http import HttpResponseRedirect, JsonResponse
 
 # Create your views here.
@@ -105,14 +107,20 @@ def adminIn(request):
 def addCrime(request):
     if request.session.get("admin-login", False):
 
+        offences = Crime.objects.all()
         args = {
-                'message': "You're already Logged in!",
+                'message': "Make the charge sheet here",
+                "offences" : offences,
+                "admin": request.session['admin'],
                 }
         return render(request, 'addcrime.html', args)
     args = {
         'message': "Please, Login In Here",
     }
     return render(request, "login.html",args)
+
+
+
 
 
 def adminOut(request):
