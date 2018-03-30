@@ -31,7 +31,7 @@ def adminLogin(request):
 
         args = {
                 'message': "You're already Logged in!",
-                "admin": request.session['admin']
+                'admin':request.session['admin']
 
                 }
         return render(request, 'admin.html', args)
@@ -113,3 +113,12 @@ def addCrime(request):
         'message': "Please, Login In Here",
     }
     return render(request, "login.html",args)
+
+
+def adminOut(request):
+
+    if request.session.get("admin-login",False):
+        request.session.pop("admin-login")
+        return render(request,"login.html",{"message":"You're sucessfully log out"})
+
+    return render(request, "login.html", {"message": "You're Already log out"})
