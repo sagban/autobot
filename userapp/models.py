@@ -9,7 +9,7 @@ class userRegister(models.Model):
     regCell = models.TextField(max_length=10)
 
     def __str__(self):
-        return self.regId
+        return self.regLicense
 
 
 class user(models.Model):
@@ -38,7 +38,7 @@ class vehicle(models.Model):
     regAuth = models.TextField(max_length=20)
 
     def __str__(self):
-        return self.vehicleId
+        return self.engineNumber
 
 
 class userVehicleOwnership(models.Model):
