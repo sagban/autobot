@@ -25,7 +25,7 @@ class user(models.Model):
     userCell = models.ForeignKey(userRegister, null=False, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.userId
+        return self.userName
 
 class vehicle(models.Model):
     vehicleId = models.AutoField(primary_key=True)

@@ -29,7 +29,7 @@ def index(request):
         regex_strings = re.search("^[A-Z]{2}[ -][0-9]{1,2}(?: [A-Z])?(?: [A-Z]*)? [0-9]{4}$",utf8_text)
         regex_string = regex_strings[0]
         #if regex_string is not Null:
-        request.session['utf'] = regex_string;
+        request.session['utf-image'] = regex_string
         return JsonResponse({'utf8_text': regex_string})
         #return JsonResponse({'utf8_text': 'sagar'})
     return render(request, 'admin.html')
@@ -113,22 +113,24 @@ def adminIn(request):
 
 
 def numberValidate(request):
-    if request.session.get("admin-login",False):
+    # if request.session.get("admin-login",False):
 
 
-        if request.POST["image-input"] != '':
-            if request.session.get("utf",False):
-                regNumber = request.session["utf"];
-                '''Search The User Db here'''
-                return HttpResponseRedirect("/addcrime")
-            return HttpResponseRedirect("/adminIn")
-        elif request.POST["text-input"] != '':
-            regNumber = request.POST["text-input"]
-            '''Search The User Db here'''
+        # if request.POST["image-input"] != '':
+        #     if request.session.get("utf-image",False):
+        #         request.session["utf-text"] = request.POST["text-input"]
+        #         if request.session["utf-text"] == '':
+        #             regNumber = request.session["utf-image"];
+        #         regNumber= request.session["utf-text"]
+        #         return HttpResponseRedirect("/addcrime")
+        #     return HttpResponseRedirect("/adminIn")
+        if request.POST["image-input"] != None and request.POST["text-input"] != None :
             return HttpResponseRedirect("/addcrime")
-        return HttpResponseRedirect("/adminIn")
+        else:
+            return HttpResponseRedirect("/adminIn")
 
-    return HttpResponseRedirect("/admin-login")
+
+    # return HttpResponseRedirect("/admin-login")
 
 '''Yet to complete, Most probably this function will call after the image processing or vehical number validation for the criminal search.'''
 def addCrime(request):
