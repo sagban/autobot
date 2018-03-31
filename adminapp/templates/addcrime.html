@@ -20,6 +20,7 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class="col s12 m8">
                     <div class="card">
                         <div class="card-content black-text" style="text-align: left">
@@ -51,6 +52,55 @@
                                 <div class="input-field col s12 m4">
                                     <label for="datepicker">Date</label>
                                     <input type = "date" class = "datepicker" id="datepicker" />
+=======
+            </div>
+        </div>
+        <div class="col m9 s12">
+          <div class="card">
+            <div class="card-content blue-grey lighten-4">
+              <span class="card-title">Add Violation Details Here</span>
+            </div>
+
+              <div class="card-content">
+                  <div class="row">
+                    <!--div class="input-field col s12 m6">
+                      <label for="timepicker">Time</label>
+                      <input  type="time" id="timepicker" class="timepicker">
+                    </div-->
+
+                    <div class="input-field col s12 m4">
+                      <label for="datepicker">Date</label>
+                        <input type = "date" class = "datepicker" id="datepicker" />
+                    </div>
+
+                  </div>
+                  <a class="btn-floating halfway-fab waves-effect waves-light blue-grey" id="add-todo-item"><i class="material-icons">add</i></a>
+              </div>
+
+          </div>
+
+            <ul id="todo-list">
+                <li class="card" id="todo-list-item">
+                    <div class="card-content todo-form">
+
+                        <div class="row">
+                            <form class="col s12 m12">
+                              <div class="row">
+                                <div class="input-field col s12 m12">
+                                    <select class="icons">
+                                      <option class="text-blue-grey" value="" disabled selected>Choose Violation</option>
+                                        {% for offence in offences %}
+                                        <option class="blue-grey" value="" >{{offence}}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <label>Select Violation</label>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="input-field col s12">
+                                  <input id="textarea1" type="text"class="validate"></input>
+                                  <label for="textarea1">Comments</label>
+>>>>>>> master
                                 </div>
                             </div>
                             <a class="btn-floating halfway-fab waves-effect waves-light blue-grey" id="add-todo-item"><i class="material-icons">add</i></a>
