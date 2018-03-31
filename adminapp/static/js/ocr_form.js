@@ -47,22 +47,22 @@ $(document).ready(function() {
             $resultContainer.removeClass("result-default result-error");
             $resultContainer.addClass("result-success");
             $resultContainer.html(data.utf8_text);
-            var $imageResult = $resultContainer.parents();
+            /*var $imageResult = $resultContainer.parents();
             var $filePath = $imageResult.parents();
             var $form = $filePath.parents();
             var $input = $form.find('#icon_prefix');
-            $input.prop("disabled",true);
+            $input.prop("disabled",true);*/
 
         })
         .fail(function(jqXHR) {
             $resultContainer.removeClass("result-default result-success");
             $resultContainer.addClass("result-error");
             $resultContainer.html('Cannot Process Image. Enter Manually');
-            var $imageResult = $resultContainer.parents();
+           /* var $imageResult = $resultContainer.parents();
             var $filePath = $imageResult.parents();
             var $form = $filePath.parents();
             var $input = $form.find('#icon_prefix');
-            $input.prop("disabled",false);
+            $input.prop("disabled",false);*/
         });
     });
 });
